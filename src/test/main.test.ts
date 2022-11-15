@@ -25,6 +25,12 @@ describe('bowling score', ()=> {
             it('one strike with more throws', () => {
                 expect(bowlingScore([1, 1, 10, 1, 1, 1])).toEqual(17)
             });
+           it('two strikes', () => {
+                expect(bowlingScore([10, 1, 1, 10, 1, 1])).toEqual(28)
+            });
+           it('two strikes in a row', () => {
+                expect(bowlingScore([10, 10, 1, 1, 1, 1])).toEqual(37)
+            });
 
         });
     });
