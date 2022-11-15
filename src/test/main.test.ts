@@ -34,7 +34,11 @@ describe('bowling score', ()=> {
            it('three strikes in a row', () => {
                 expect(bowlingScore([10, 10, 10, 1, 1, 1, 1])).toEqual(67)
             });
-
+        });
+        describe('with spares', ()=> {
+            it('one strike', () => {
+                expect(bowlingScore([10, 1, 1])).toEqual(14)
+            });
         });
     });
 });
