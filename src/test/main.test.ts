@@ -18,5 +18,11 @@ describe('bowling score', ()=> {
                 expect(bowlingScore([3, 2])).toEqual(5)
             });
         });
+        describe('with strikes', ()=> {
+            it('one strike', () => {
+                expect(bowlingScore([10, 1, 1])).toEqual(14)
+            });
+
+        });
     });
 });
