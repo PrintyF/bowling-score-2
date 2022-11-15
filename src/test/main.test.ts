@@ -22,6 +22,9 @@ describe('bowling score', ()=> {
             it('one strike', () => {
                 expect(bowlingScore([10, 1, 1])).toEqual(14)
             });
+            it('one strike with more throws', () => {
+                expect(bowlingScore([1, 10, 1, 1, 1])).toEqual(16)
+            });
 
         });
     });
