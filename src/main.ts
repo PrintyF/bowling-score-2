@@ -1,3 +1,3 @@
-export function bowlingScore(results: Array<number>) {
-    return 0;
+export function bowlingScore(results: Array<number>): number {
+    return results[0];
 }
