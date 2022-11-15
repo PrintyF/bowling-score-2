@@ -36,8 +36,11 @@ describe('bowling score', ()=> {
             });
         });
         describe('with spares', ()=> {
-            it('one strike', () => {
-                expect(bowlingScore([10, 1, 1])).toEqual(14)
+            it('one spare', () => {
+                expect(bowlingScore([9, 1, 1, 1])).toEqual(13)
+            });
+            it('two spares', () => {
+                expect(bowlingScore([7, 3, 3, 7, 1, 1])).toEqual(26)
             });
         });
     });

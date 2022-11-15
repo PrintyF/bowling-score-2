@@ -1,17 +1,20 @@
 export function bowlingScore(results: Array<number>): number {
     let bonus = 1;
     let frame = 0;
+    let score = [];
     for (let i = 0; i < results.length; i++) {
-        results[i] *= bonus;
-        if (bonus > 2)
+        score.push(results[i] * bonus);
+        if (bonus === 3)
             bonus--;
-        if (frame % 2 === 1 && bonus > 1)
+        if (bonus > 1 && results[i - 1] != 10)
             bonus--;
-        if (results[i] % 10 === 0) {
+        if (results[i] + results[i - 1] === 10 && frame % 2 === 1)
+            bonus++;
+        if (results[i] === 10) {
             bonus++;
             frame++;
         }
         frame++;
     }
-    return results.reduce((accumulator, value) => accumulator + value);
+    return score.reduce((accumulator, value) => accumulator + value);
 }
