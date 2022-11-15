@@ -7,15 +7,7 @@ export function bowlingScore(results: Array<number>): number {
             bonus--;
         if (frame % 2 === 1 && bonus > 1)
             bonus--;
-        if (results[i] === 10) {
-            bonus++;
-            frame++;
-        }
-        else if (results[i] === 20) {
-            bonus++;
-            frame++;
-        }
-        else if (results[i] === 30) {
+        if (results[i] % 10 === 0) {
             bonus++;
             frame++;
         }
