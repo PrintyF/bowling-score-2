@@ -1,3 +1,3 @@
 export function bowlingScore(results: Array<number>): number {
-    return results[0];
+    return results.reduce((accumulator, value) => accumulator + value);
 }
