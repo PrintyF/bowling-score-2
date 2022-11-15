@@ -15,6 +15,10 @@ export function bowlingScore(results: Array<number>): number {
             bonus++;
             frame++;
         }
+        else if (results[i] === 30) {
+            bonus++;
+            frame++;
+        }
         frame++;
     }
     return results.reduce((accumulator, value) => accumulator + value);

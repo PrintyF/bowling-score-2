@@ -31,6 +31,9 @@ describe('bowling score', ()=> {
            it('two strikes in a row', () => {
                 expect(bowlingScore([10, 10, 1, 1, 1, 1])).toEqual(37)
             });
+           it('three strikes in a row', () => {
+                expect(bowlingScore([10, 10, 10, 1, 1, 1, 1])).toEqual(67)
+            });
 
         });
     });
